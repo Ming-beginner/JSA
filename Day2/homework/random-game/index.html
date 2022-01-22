@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="message">
+      <h1>You Lost!!</h1>
+      <button id="end-btn">Continue</button>
+    </div>
+    <div class="overlay">
+
+    </div>
+    <main>
+      <h1>GUEST THE NUMBER</h1>
+      <div class="game-mode div-active">
+        <div class="select-game-mode">
+          <h2>Game mode</h2>
+          <select name="mode" id="select-mode">
+            <option value="easy">Easy(1-10)</option>
+            <option value="medium">Medium(1-30)</option>
+            <option value="hard">Hard(1-50)</option>
+          </select>
+        </div>
+        <button id="mode-submit">Play</button>
+      </div>
+      <div class="game-play">
+        <h3>Round <span id="round-number"></span> </h3>
+        <div class="input-field">
+          <input id="player-input" placeholder="Enter a number" type="number" min="1" max="50">
+          <button class="play-submit-btn">Submit</button>
+        </div>
+        <div id="result">
+          <h3>You: <span id="player-number"></span> </h3>
+          <h3>Computer: <span id="computer-number"></span> </h3>
+          <h2>Result: <span class="result-text"></span> </h2>
+        </div>
+        <button id="play-next-btn">Next</button>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+
+</html>
