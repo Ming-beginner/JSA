@@ -143,14 +143,16 @@ const updateStudent = (oldStudent) => {
     }).then(() => render());
   };
 };
-const render = () => {
+async function render() {
   fetch(API_URL)
-    .then((response) => response.json())
+    .then((response) => {
+      return response.json();
+    })
     .then((data) => {
       getStudent(data);
       hideLoading();
     });
-};
+}
 
 render();
 createBtn.onclick = createStudent;
